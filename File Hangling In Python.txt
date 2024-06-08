@@ -1,0 +1,168 @@
+# Opening a File :
+
+"""
+   
+Before we can perform any operations on a file, we must 
+first open it. Python provides the open() function to open 
+a file. It takes two arguments: the name of the file and 
+the mode in which the file should be opened.
+
+"""
+
+# Modes in file
+
+"""
+
+There are various modes in which we can open files.
+
+1. read (r): This mode opens the file for reading only 
+   and gives an error if the file does not exist. This is 
+   the default mode if no mode is passed as a parameter.
+
+2. write (w): This mode opens the file for writing only
+   and creates a new file if the file does not exist. This
+   mode ovwewrites the previous text in the file if the
+   program is run again with the new text. In this case the 
+   new text will overwrier the previous one in the file.
+
+3. append (a): This mode opens the file for appending only 
+   and creates a new file if the file does not exist. Adds
+   new data to the existing data.
+
+4. create (x): This mode creates a file and gives an error
+   if the file already exists.So it might be useful during
+   if we want it in error handling. Otherwise the write()
+   modes creates it.
+
+5. text (t): Apart from these modes we also need to specify
+   how the file must be handled. t mode is used to handle 
+   text files. t refers to the text mode. There is no 
+   difference between r and rt or w and wt since text mode
+   is the default. The default mode is 'r' 
+   (open for reading text, synonym of 'rt' ).
+
+6. binary (b): used to handle binary files (images, 
+   pdfs etc).
+
+"""
+
+# Writing Something As a Text To a File :
+    
+"""
+
+f = open("D://File1.txt", "wt")
+
+f.write("My name iz Haroon."
+        "\n\nI am learning cybersecuritry")
+
+f.close()
+
+"""
+
+# Reading a file in Binary Form (Image) :
+
+"""
+
+f1 = open("D://Kernel Auditing Linux.jpg", "rb")
+
+pic = f1.read()
+print(pic)
+
+f1.close()
+
+"""
+
+# Reading a file as a text (Text) :
+
+"""
+
+
+
+
+f1 = open("D://File1.txt", "rt")
+
+txt = f1.read()
+print(txt)
+
+f1.close()
+
+"""
+# Reading a PDF File : 
+    
+"""
+
+f = open("D://python.pdf", "rb")
+
+print(f.read())
+
+f.close()
+
+"""
+
+# Creating a Text File And Writing Textual Content in it : 
+
+"""
+
+f = open("D://File2.txt", "xt")
+
+f.close()
+
+"""
+
+# Creating a Text File And Writing Binary Content in it :
+    
+"""
+
+
+
+f = open("D://File3.txt", "xb")
+
+f.write(b"Hi My age is 20.\nI am an Idiot.")
+
+f.close()
+
+"""
+
+# Appending Data to a File :
+
+"""
+(t) and (b) can also be used here, just mentioning (b) 
+before binary data is mandatory coz (t) is default
+
+
+f = open("D://File3.txt", "a")
+
+f.write("\nI am an Idiot. \nI am Stupid. ")
+
+f.close()
+
+"""
+
+# Closing a File :
+    
+"""
+
+It is important to close a file after you are done with 
+it.To close a file, you can use the close() method as used
+above
+
+"""
+
+# The 'with' statement :
+    
+"""
+
+Alternatively, you can use the with statement to 
+automatically close the file after you are done with it.
+
+with open("File3.txt", "r") as f:
+    print(f.read())
+
+
+
+
+"""
+
+
+
+
