@@ -8,3 +8,9 @@ I have not in cluded any complex stuff like using os module for file handling, o
 I have just used basic modes of operations like read, write, append but are used from almost all angles coz even in these terms the expert codes get confused
 
 I have used read() from many aspects and the others also to give insights of these basic funtions.
+
+# Getters And Setters In Python
+
+Setter Methods: These methods allow you to modify the value of an attribute
+
+Setter Methods: These methods allow you to modify the value of an attribute
