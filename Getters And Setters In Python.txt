@@ -1,0 +1,89 @@
+# GETTERS AND SETTERS
+
+
+# In object-oriented programming, Getter and Setter methods are used to access and modify
+# the private variables of a class, respectively.
+
+
+# Setter is used to set value for a variable and getter for getting the value.
+
+
+class A:
+
+    def __init__(self, a):
+        self.a = a
+
+    """
+    Getters: 
+    
+    Getters in Python are methods that are used to access the values of an object's properties. '
+    They are used to return the value of a specific property, and are typically defined using the
+    @property decorator.
+    
+    
+    """
+
+    # Getter Down
+    @property
+    def show(self):
+        return "Hi Haroon.", self.a
+
+    """
+    Setters: 
+    
+    It is important to note that the getters do not take any parameters and we cannot set 
+    the value through getter method.For that we need setter method which can be added by 
+    decorating method with @property_name.setter
+    
+    """
+
+    # Setter Down
+    @show.setter
+    def show(self, n):
+        self.a = n
+
+
+obj = A("Idiot")
+
+for i in obj.show:
+    print(i, end=" ")
+print()
+obj.show = "Good"
+
+for i in obj.show:
+    print(i, end=" ")
+
+"""
+
+In conclusion, getters are a convenient way to access the values of an object's properties, 
+while keeping the internal representation of the property hidden. This can be useful for 
+encapsulation and data validation.
+
+"""
+# Another Easy Example:
+
+
+# class Book:
+# 
+#     def __init__(self, title):
+#         self._title = title
+# 
+# 
+#     @property
+#     def title(self):
+#         return self._title
+#     
+#     
+#     @title.setter
+#     def title(self, value):
+#         self._title = value
+# 
+# 
+# book = Book("Python Programming")
+# print(book.title)  # Output: Python Programming
+# 
+# book.title = "Python Basics"
+# print(book.title)  # Output: Python Basics
+
+# In this example, the Book class has a property title with a getter and a setter. The setter 
+# simply assigns the value to the internal variable_title.
