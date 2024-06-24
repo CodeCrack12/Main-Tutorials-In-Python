@@ -14,3 +14,8 @@ I have used read() from many aspects and the others also to give insights of the
 Setter Methods: These methods allow you to modify the value of an attribute
 
 Setter Methods: These methods allow you to modify the value of an attribute
+
+# Access Specifiers in Python:
+
+Access specifiers or access modifiers in python programming are used to limit the access
+of class variables and class methods outside of class.
