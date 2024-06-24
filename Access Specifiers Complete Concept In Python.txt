@@ -1,0 +1,109 @@
+"""
+
+Access Specifiers in Python:
+
+Access specifiers or access modifiers in python programming are used to limit the access
+of class variables and class methods outside of class.
+
+"""
+# Types of access specifiers:
+
+"""
+
+Public Access Specifier in Python:
+
+All the variables and methods in python are by default public.
+Any instance variable in a class followed by the ‘self’ keyword ie. self.variable are publicly
+accessible.
+
+"""
+
+
+# Example:
+class Game:
+    score = 30
+
+    def criminals(self, name):
+        self.name = name
+
+
+c = Game()
+
+print(c.score)
+c.criminals("Haroon")
+print(c.name)
+
+"""
+
+Private Access Modifiers:
+
+By definition, Private members of a class (variables or methods) are those members which are 
+only accessible inside the class. We cannot use private members outside of class.
+
+Private Variables are written as __variable and can be accessed outside the class in one condition
+by writing _Class__variable outside the class.
+
+The variable is not actually private but for the sake to use it or make it private name mangling
+is used in which the variable name is converted into the syntax mentioned above.
+
+So the direct usage of this variable can be prevented but still we can access it indirectly.
+
+
+"""
+# Example:
+class Game1:
+
+    __score = 40
+
+    def __criminals1(self, name):
+        self.__name = name
+
+
+
+a = Game1()
+
+# print(a.__score)         # Throws Error
+# a.__criminals1("Loyal")  # Throws Error
+# print(a.__name)          # Throws Error
+print(a.__dir__())         # Check For Name Mangling before passing value to "name" parameter.
+
+# Correct Way:
+
+print(a._Game1__score)
+a._Game1__criminals1("Loyal")
+print(a._Game1__name)
+print(a.__dir__())         # Check For Name Mangling after passing value to "name" parameter.
+
+
+"""
+
+Protected Access Specifiers:
+
+In object-oriented programming (OOP), the term "protected" is used to describe a member 
+(i.e., a method or attribute) of a class that is intended to be accessed only by the class 
+itself and its subclasses. 
+
+The syntax we follow to make any variable protected is to write variable name followed by a 
+single underscore (_) ie. _variable.
+
+"""
+
+# Example:
+class W:
+
+    _var1 = "cyber_Security"
+
+w = W()
+print(w._var1)
+
+class P(W):
+    pass
+
+p = P()
+print(p._var1)
+
+class Z:
+    pass
+
+z = Z()
+# print(z._var1) # Throws Error
