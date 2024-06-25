@@ -107,3 +107,7 @@ class Z:
 
 z = Z()
 # print(z._var1) # Throws Error
+
+
+It's important to note that the single underscore is just a naming convention, and does not actually provide any protection or restrict access to the member.
+In the last step it throws an eror but so is the case with public variables.
