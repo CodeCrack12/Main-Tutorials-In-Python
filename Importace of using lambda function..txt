@@ -1,0 +1,13 @@
+# Using Normal Function :
+
+# def cube(x):
+#     return x * x * x
+# def apply(a):
+#     return 6 + cube(a)
+# print(apply(2))
+
+# Using lambda Function :
+
+# def apply(cube, x):
+#     return 6 + cube(x)
+# print(apply(lambda x: x * x * x, 2))
